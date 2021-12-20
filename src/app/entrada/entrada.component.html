@@ -4,7 +4,7 @@
 
  
     <input placeholder="Escribe..." type="text" #task />
-    <button mat-raised-button color="primary" (click)="addTask(task.value)"> AgregarTarea</button>
+    <button mat-raised-button color="primary" (click)="addTask(task.value)"> Agregar Tarea</button>
   
     <div>
         <app-salida [listas]="list" (salida)="removeTask($event)"></app-salida>
