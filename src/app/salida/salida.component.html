@@ -1,0 +1,6 @@
+<ul *ngFor="let item of listas">
+    <li>
+        <h3>{{item.name}} <button  mat-stroked-button color="primary" (click)="eliminar(item.id)" >Eliminar</button></h3>
+    </li>
+</ul>
+

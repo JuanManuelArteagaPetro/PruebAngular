@@ -1,0 +1,13 @@
+<br><br>
+<br>
+<div id="card" style="text-align: center;">
+
+ 
+    <input placeholder="Escribe..." type="text" #task />
+    <button mat-raised-button color="primary" (click)="addTask(task.value)"> AgregarTarea</button>
+  
+    <div>
+        <app-salida [listas]="list" (salida)="removeTask($event)"></app-salida>
+    </div>
+</div>
+

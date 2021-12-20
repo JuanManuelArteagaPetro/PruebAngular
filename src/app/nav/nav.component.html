@@ -1,0 +1,32 @@
+<div style="height: 80vh;">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <div fxShow="true" fxHide.lt-md>
+     
+          <span>
+         
+          <a  mat-button routerLink="bienvenido" >ANGULAR</a>
+          <a   mat-button routerLink="entrada" >TAREAS</a> 
+         
+        </span>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+          <a (click)="sidenav.toggle()" href="" mat-list-item>Home</a>
+          <a href="#" mat-list-item routerLink="entrada" >Entrada</a>
+          <a href="#" mat-list-item routerLink="bienvenido" >Angular</a>
+         
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill><router-outlet></router-outlet></mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  
